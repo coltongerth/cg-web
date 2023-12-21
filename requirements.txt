@@ -1,4 +1,8 @@
 flask==2.0.2
 pandas
+geopandas
+plotly
+ipykernel
+nbformat
 python-dotenv
 gunicorn>=20.1.0
