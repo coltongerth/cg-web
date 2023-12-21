@@ -1,0 +1,4 @@
+flask==2.0.2
+pandas
+python-dotenv
+gunicorn>=20.1.0
