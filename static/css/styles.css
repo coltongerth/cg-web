@@ -1,0 +1,143 @@
+
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: none;
+    
+  }
+  
+  .app-body {
+    background-color:#363a42;
+    min-height: 100vh;
+    font-size: calc(5px + 2vmin);
+    color: white;
+    /* font-family: 'Roboto', sans-serif; */
+  }
+  
+  .logo-holder {
+    float: right;
+    padding: 10px;
+    }
+  
+    .logo-holder a {
+      display: inline-block;
+      width: 60px;
+      height: auto;
+    }
+  
+    .logo-holder img {
+      width: 100%;
+      height: 100%;
+      }
+  
+    .logo-holder ul{
+      display:flex;
+    }
+    .logo-holder ul li{
+      list-style: none;
+      padding-left: 10px;
+      
+    }
+    .projects-section ul{
+      display:column;
+      text-align: center;
+    }
+    .projects-section a{
+      text-decoration:none;
+      color:white;
+    }
+    .projects-section ul li{
+      list-style: none;
+      text-align: center;
+      /* padding-left: 10px; */
+      
+    }
+    .project-link{
+      text-align: center;
+     
+      cursor:pointer;
+      
+      
+    }
+  .app-header {
+      background-color: #282c34;
+      min-height: 10vh;
+      font-size: calc(10px + 2vmin);
+      color: white;
+    }
+  
+  section{
+  display:flex;
+  width:100%;
+  padding-top: 20vh;
+  }
+  main{
+    width:60%;
+  }
+  aside{
+    width:35%;
+  }
+  
+  .projects-section h1 {
+    --base-width: 4.2vw;
+    font-size: clamp(10px, var(--base-width), 300px);
+    font-weight: 400;
+    /* letter-spacing: -0.15rem; */
+    line-height: 1.2;
+    text-align: center;
+    /* margin: 100px 0; */
+    white-space: nowrap;
+  }
+  
+  .welcome-body h1 {
+    --base-width: 8.2vw;
+    font-size: clamp(20px, var(--base-width), 700px);
+    font-weight: 700;
+    /* letter-spacing: -0.15rem; */
+    line-height: 1.2;
+    text-align: center;
+    /* margin: 100px 0; */
+    white-space: nowrap;
+    /* top: -10vw; */
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
+  }
+  
+  .welcome-body h4 {
+    --base-width: 8.2vw;
+    /* font-size: clamp(20px, var(--base-width), 300px); */
+    font-weight: 300;
+    /* letter-spacing: -0.15rem; */
+    line-height: 1.2;
+    text-align: left;
+    font-family: roboto;
+    /* margin: 100px 0; */
+    /* white-space: nowrap; */
+  }
+  .colton-description {
+    padding-left: 20vw;
+  }
+  /* @media only screen and (max-width: 950px) {
+    .logo-holder {
+      float: right;
+      width: 80px;
+      height: auto;
+      padding: 10px;
+      }
+    
+    .app-header {
+        background-color: #282c34;
+        min-height: 10vh;
+        font-size: calc(10px + 2vmin);
+        color: white;
+      }
+    } */
+    @media only screen and (max-width: 600px) {
+      .logo-holder {
+        padding: 15px;
+        }
+      .app-header {
+        min-height: 13vh;
+      }
+    }

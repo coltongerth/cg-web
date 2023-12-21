@@ -1,0 +1,40 @@
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    
+</head>
+
+
+    <!-- {/* <header className="app-header">
+
+    </header> */} -->
+<body class = "app-body">
+    <nav class="logo-holder">
+        <ul>
+        {% include "/components/logos.html" %}
+        </ul>
+    </nav>
+    <section>
+        <main>
+        <div class="welcome-body">
+            <TextHeader text="Welcome" />
+            <div className="colton-description">
+            <TextBody text = "My name is Colton Gerth, I am a Software Engineer with experience in a large variety of tools. I have collaborated in the development of several web-based programs that have been in use by several scientific organizations such as the United States Forest Service and the University of Oregon." />
+            </div>
+        </div>
+        </main>
+        <aside>
+        <div class="projects-section">
+            <!-- <TextHeader text="Projects" />
+            <LineDrawing />
+            <ProjectList /> -->
+        </div>
+        
+        </aside>
+
+    </section>
+</body>
+  
