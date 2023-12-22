@@ -39,6 +39,19 @@
       padding-left: 10px;
       
     }
+
+    .projects-section h1 {
+      --base-width: 4.2vw;
+      font-size: clamp(10px, var(--base-width), 300px);
+      font-weight: 400;
+      /* letter-spacing: -0.15rem; */
+      line-height: 1.2;
+      text-align: center;
+      /* margin: 100px 0; */
+      white-space: nowrap;
+    }
+    
+
     .projects-section ul{
       display:column;
       text-align: center;
@@ -50,6 +63,14 @@
     .projects-section ul li{
       list-style: none;
       text-align: center;
+      padding: 10px;
+      /* padding-left: 10px; */
+      
+    }
+    .projects-section h2{
+      list-style: none;
+      text-align: center;
+      padding: 10px;
       /* padding-left: 10px; */
       
     }
@@ -79,17 +100,7 @@
     width:35%;
   }
   
-  .projects-section h1 {
-    --base-width: 4.2vw;
-    font-size: clamp(10px, var(--base-width), 300px);
-    font-weight: 400;
-    /* letter-spacing: -0.15rem; */
-    line-height: 1.2;
-    text-align: center;
-    /* margin: 100px 0; */
-    white-space: nowrap;
-  }
-  
+
   .welcome-body h1 {
     --base-width: 8.2vw;
     font-size: clamp(20px, var(--base-width), 700px);

@@ -20,17 +20,17 @@
     <section>
         <main>
         <div class="welcome-body">
-            <TextHeader text="Welcome" />
-            <div className="colton-description">
-            <TextBody text = "My name is Colton Gerth, I am a Software Engineer with experience in a large variety of tools. I have collaborated in the development of several web-based programs that have been in use by several scientific organizations such as the United States Forest Service and the University of Oregon." />
+            <h1>Welcome</h1>
+            <div class="colton-description">
+                <h4>My name is Colton Gerth, I am a Software Engineer with experience in a large variety of tools. I have collaborated in the development of several web-based programs that have been in use by several scientific organizations such as the United States Forest Service and the University of Oregon.</h4>
             </div>
+            {% include "/components/covid-fig.html" %}
         </div>
         </main>
         <aside>
         <div class="projects-section">
-            <!-- <TextHeader text="Projects" />
-            <LineDrawing />
-            <ProjectList /> -->
+            <h1>Projects</h1>
+            {% include "/components/projects.html" %}
         </div>
         
         </aside>
