@@ -61,11 +61,15 @@
       color:white;
     }
     .projects-section ul li{
+      cursor:pointer;
       list-style: none;
       text-align: center;
       padding: 10px;
-      /* padding-left: 10px; */
-      
+    }
+    .projects-section a:hover{
+      /* font-weight:bold; */
+      text-decoration:none;
+      border-bottom:1px solid #ccc;
     }
     .projects-section h2{
       list-style: none;
@@ -74,13 +78,13 @@
       /* padding-left: 10px; */
       
     }
-    .project-link{
+    /* .project-link{
       text-align: center;
      
       cursor:pointer;
       
       
-    }
+    } */
   .app-header {
       background-color: #282c34;
       min-height: 10vh;
