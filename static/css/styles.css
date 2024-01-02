@@ -107,6 +107,9 @@
       font-size: calc(10px + 2vmin);
       color: white;
   }
+  .slider {
+    width: 100%;
+  }
   
   section{
   display:flex;
