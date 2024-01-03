@@ -7,9 +7,7 @@ var tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 function getColor(d,y) {
 
     var result = '';
-    console.log(d)
     if(d == null){
-        console.log("ping")
         result = '#000000';
     }
     else if(d <= 0.5 * global_data[y] ){
@@ -33,6 +31,7 @@ function getColor(d,y) {
 }
 
 var info = L.control();
+var global_temp = L.control();
 
 info.onAdd = function (map) {
     this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
@@ -57,6 +56,28 @@ info.update = function (name,props) {
     
 };
 
+
+global_temp.onAdd = function (map) {
+    this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
+    this.update();
+    return this._div;
+};
+
+// method that we will use to update the control based on feature properties passed
+global_temp.update = function (year,props) {
+    if(props != undefined){
+        if(props != null ){
+            this._div.innerHTML = '<h4>Global Average</h4>' +  (
+                '<b>' + year + '</b><br />' + props + ' Δ°C '
+                );
+        }
+    
+    }
+    
+    
+};
+
+global_temp.addTo(map);
 info.addTo(map);
 
 function style(feature) {
@@ -79,16 +100,13 @@ function onEachFeature(feature, layer) {
 }
 
 function updateMap(value) {
-    // Update the map based on the slider value
-    // This is where you can add your logic to change map layers, etc.
-    console.log("Slider value: " + value);
     initOrUpdateLayer(window.geo_json, value)
 }
 
-// Add event listener to the slider
 var slider = document.getElementById('slider');
 slider.addEventListener('input', function() {
     updateMap(this.value);
+    global_temp.update(this.value,window.global_data[this.value])
 });
 
 function initOrUpdateLayer(json, newYear) {
@@ -96,10 +114,8 @@ function initOrUpdateLayer(json, newYear) {
     if (window.choropleth) {
         map.removeLayer(window.choropleth);
     }
-    // Update the global year variable
     year = newYear;
 
-    // Add new choropleth layer
     window.choropleth = L.geoJson(JSON.parse(json[newYear])["features"], { style: style, onEachFeature: onEachFeature }).addTo(map);
 }
 
@@ -131,17 +147,12 @@ Promise.all([
     fetch('static/data/global_data.json').then(response => response.json()),
     fetch('static/data/refined_geodata.json').then(response => response.json())
 ]).then(([globalData, geoJson]) => {
-    console.log(geoJson)
-    // console.log("here")
-   
 
     window.global_data = globalData;  // Make sure this is accessible globally
     window.geo_json = geoJson;
     const initialYear = 1961;
     initOrUpdateLayer(window.geo_json, initialYear);
-
-    // Initialize slider here if needed
-    // slider.addEventListener('input', event => initOrUpdateLayer(geoJson, event.target.value));
+    global_temp.update(initialYear,window.global_data[initialYear])
 });
 
 document.getElementById("t-project").addEventListener("click",function(){
