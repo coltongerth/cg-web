@@ -138,6 +138,20 @@
     /* transform: translateX(-50%); */
   }
 
+  .welcome-body h2 {
+    --base-width: 4vw;
+    font-size: clamp(20px, var(--base-width), 700px);
+    font-weight: 500;
+    /* letter-spacing: -0.15rem; */
+    line-height: 1.2;
+    text-align: center;
+    /* margin: 100px 0; */
+    white-space: nowrap;
+    /* top: -10vw; */
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
+  }
+
   .welcome-body h4 {
     --base-width: 8.2vw;
     /* font-size: clamp(20px, var(--base-width), 300px); */
@@ -148,6 +162,10 @@
     font-family: roboto;
     /* margin: 100px 0; */
     /* white-space: nowrap; */
+  }
+  .figure-holder {
+    width: 100%;
+    height: 800px;
   }
   .colton-description {
     padding-left: 20vw;
