@@ -1,3 +1,36 @@
 <div id="HWPCarbon-content" style="display: none">
     <h2>HWPCarbon</h2>
+    <h3>What is HWPCarbon?</h3>
+    <h4>HWPCarbon is a web-based carbon accounting tool calculates cumulative carbon stocks and emissions through time for harvested wood products (HWP) using the Tier 3 Production Approach carbon accounting guidelines developed by the Intergovernmental Panel on Climate Change (IPCC).</h4>
+    <h4>While HWPCarbon is behind an authenticated user login, you can see it live at: <a href="https://hwpc-stg.fs2c.usda.gov">https://hwpc-stg.fs2c.usda.gov</a></h4>
+    <br>
+    <h3>Who uses HWPCarbon?</h3>
+    <h4>The US Forest Service and several forest growth research groups that utilize carbon storage data.</h4>
+    <br>
+    <h3>What were my contributions?</h3>
+    <h4>Unlike the Fuelcast project which was already built by the time I was brought on, I had a hand in building this web application from the ground up. While there were many different processes used over the development process, and there were several milestones I am proud of:</h4>
+    <section class="slider-wrapper">
+        <button class="slide-arrow" id="slide-arrow-prev-hc">
+            &#8249;
+        </button>
+        
+        <button class="slide-arrow" id="slide-arrow-next-hc">
+            &#8250;
+        </button>
+        
+        <ul class="slides-container" id="slides-container-hc">
+            <li class="slide-hc">
+                <h4>I set up the UI to deliver user inputs to our back-end calculator to process and return to the user via an email system.</h4>
+                <img src="../../static/img/hwpcarbon_inputs.PNG">
+            </li>
+            <li class="slide-hc">
+                <h4>I took the computed results of the user's carbon calulator session and displayed it through an interactive graph UI with the use of Plotly.</h4>
+                <img src="../../static/img/withoutlines.PNG">
+            </li>
+            <!-- <li class="slide-hc">
+                <h4>I successfully linked the load-balancer that handled the caching of large downloads from our GCP Cloud Storage back end to the user-facing UI, a much needed feature as raster data can get quite large.</h4>
+                <img src="../../static/img/fuelcast_downloads.PNG">
+            </li> -->
+        </ul>
+      </section>
 </div>

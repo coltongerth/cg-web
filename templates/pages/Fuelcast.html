@@ -6,30 +6,32 @@
     <h4>See it live at: <a href="https://fuelcast.net/home">Fuelcast.net</a></h4>
     <br>
     <h3>Who uses Fuelcast?</h3>
-    <h4>Several government entities, such as: National Park Service, US Forest Service, Bureau of Land Management</h4>
+    <h4>Several government entities, such as: The US Forest Service, the National Park Service, and the Bureau of Land Management</h4>
     <br>
     <h3>What were my contributions?</h3>
     <h4>While I provided a general purpose level of development to the project as a whole, there were several milestones I am proud of:</h4>
     <section class="slider-wrapper">
-        <button class="slide-arrow" id="slide-arrow-prev">
+        <button class="slide-arrow" id="slide-arrow-prev-fc">
             &#8249;
         </button>
         
-        <button class="slide-arrow" id="slide-arrow-next">
+        <button class="slide-arrow" id="slide-arrow-next-fc">
             &#8250;
         </button>
         
-        <ul class="slides-container" id="slides-container">
-            <li class="slide">
+        <ul class="slides-container" id="slides-container-fc">
+            <li class="slide-fc">
                 <h4>Using Google Earth Engine, I was able to restructure the pixel raster data of each data layer into a hexgrid layout that dynamically adjusted in size and mean depending on the zoom level of the map</h4>
                 <img src="../../static/img/hex_map_fuelcast.PNG">
             </li>
-            <li class="slide">
-                <h4>I also was able to use the geometry of the zonal geojsons that the data was associated with to create a dynamic highlighting system on the map that referenced each superzone's zonal statistics with the graphs on the right.</h4>
+            <li class="slide-fc">
+                <h4>I was able to use the geometry of the zonal geojsons that the data was associated with to create a dynamic highlighting system on the map that referenced each superzone's zonal statistics with the graphs on the right.</h4>
                 <img src="../../static/img/zonal_highlight.PNG">
             </li>
-            <li class="slide"></li>
-            <li class="slide"></li>
+            <li class="slide-fc">
+                <h4>I successfully linked the load-balancer that handled the caching of large downloads from our GCP Cloud Storage back end to the user-facing UI, a much needed feature as raster data can get quite large.</h4>
+                <img src="../../static/img/fuelcast_downloads.PNG">
+            </li>
         </ul>
       </section>
     </div>
