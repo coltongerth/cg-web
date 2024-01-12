@@ -5,6 +5,23 @@
         <input type="range" id="slider" min="1961" max="2018" value="1961" class="slider">
         <div id="mapId"style="width:100%;height:800px;"></div>
     </div>
-    
+
+    <h3>What are you looking at?</h3>
+    <h4>This is a Choropleth that visualizes the historical annual change in temperature for nearly every country on the globe, and compares it to the global annual change in temperature.</h4>
+    <br>
+    <h3>What were some of the steps involved with this?</h3>
+    <h4>The project begins at the most basic level: the need for data. I needed two types of data for this, the temperature data for both the entire collection of countries and the globe, and a geojson that had information on the geometries of each country. Once I had all three, I used Pandas to clean and trim the temperature datasets and line up the data on a year range basis. Then I used Geopandas to mount the annual change in temperature for each country to each bounding geometry that it belonged to, for every year. For the Python version of this app, my job was done, as all I needed to mount the data into Ipyleaflet was a dictionary of data for every year, but for the Javascript version of this project, I needed to export the data as one geojson to be imported in the script, which is the one you're seeing!</h4>
+    <br>
+    <h3>What were my sources?</h3>
+    <h4>
+        GISTEMP Team, 2023: GISS Surface Temperature Analysis (GISTEMP), version 4. NASA Goddard Institute for Space Studies. Dataset accessed 20YY-MM-DD at https://data.giss.nasa.gov/gistemp/.
+
+        Lenssen, N., G. Schmidt, J. Hansen, M. Menne, A. Persin, R. Ruedy, and D. Zyss, 2019: Improvements in the GISTEMP uncertainty model. J. Geophys. Res. Atmos., 124, no. 12, 6307-6326, doi:10.1029/2018JD029522.
+        
+        Country geojson data provided by Natural Earth. Free vector and raster map data @ naturalearthdata.com.
+    </h4>
+    <h4>
+        Want to see the code? Check out the repo: <a href="https://github.com/coltongerth/temperature-visualizer/tree/main">Here</a>
+    </h4>
 </div>
 
