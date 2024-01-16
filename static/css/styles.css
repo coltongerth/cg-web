@@ -1,18 +1,174 @@
 
+  @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root {
+  --font-roboto: Roboto, san-serif;
+  --font-lora: Lora, serif;
+  --bg: #D4D2CE;
+  --text: #28282A;
+}
+
 * {
     padding:0;
     margin: 0;
     box-sizing: border-box;
     overflow: none;
-    
+    scroll-behavior: smooth;
+
   }
+
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: var(--font-roboto);
+
+  }
+
+  main {
+  padding: 20px;
+  padding-left: 100px;
+
+  }
+  ul, li {
+    list-style: none;
+  }
+
+  .desktop-nav {
+    position: fixed;
+    float:left;
+    height: 100vh;
+    width: 80px;
+    background-color: var(--text);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: width 0.5s;
+    z-index: 1000;
+  }
+
+  .desktop-nav.expanded {
+    width: 50vw;
+}
+
+  .nav__menu {
+    position: absolute;
+    top: 50%;
+    /* left: 5px; */
+  }
+
+  .menu_content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: var(--bg);
+    font-size: 1em;
+    text-align: center;
+    font-weight: 500;
+    width: 80px;
+    margin: auto;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+
+
+}
+
+.menu_content.active {
+    opacity: 1;
+}
+
+
+  .nav__socials {
+    position: absolute;
+    bottom: 20px;
+    width: fit-content;
+    width: 80px;
+    margin: auto;
+
+  }
+
+  .nav__socials a img {
+    width: auto;
+    height: 100%;
+  }
+
+  .nav__socials-icon {
+    height: 40px;
+    width: fit-content;
+    margin: auto;
+    margin-top: 10px;
+  }
+
+  .nav__avatar img{
+    height: auto;
+    width: 100%;
+  }
+  .nav__avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 10px;
+  }
+
+
+
+.expandedMenuContent {
+  display: block;
+  color: white; 
+  position: absolute;
+  top: 0;
+  left: 80px;
+  margin: 20px;
+
+}
+.expandedMenuContent li {
+  margin-bottom: 1em;
+}
+.expandedMenuContent a {
+  display: block;
+ 
+
+}
+
+  /* .side-menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: var(--text);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    color: white;C
+}
+
+.side-menu a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-menu a:hover {
+    color: #f1f1f1;
+}
+
+.side-menu .closeBtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+} */
+
   
   .app-body {
-    background-color:#363a42;
     min-height: 100vh;
     font-size: calc(5px + 2vmin);
-    color: white;
-    /* font-family: 'Roboto', sans-serif; */
+    background-color: var(--bg);
   }
   
   .logo-holder {
@@ -22,7 +178,7 @@
 
   .logo-holder a {
     display: inline-block;
-    width: 60px;
+    width: 40px;
     height: auto;
   }
 
@@ -38,6 +194,10 @@
     list-style: none;
     padding-left: 10px;
     
+  }
+
+  .projects-section {
+    background-color: coral;
   }
 
   .projects-section h1 {
@@ -58,7 +218,7 @@
   }
   .projects-section a{
     text-decoration:none;
-    color:white;
+    color: var(--text);
   }
   .projects-section ul li{
     cursor:pointer;
@@ -88,7 +248,7 @@
   .info {
     padding: 6px 8px;
     font: 14px/16px Arial, Helvetica, sans-serif;
-    background: white;
+    /* background: white; */
     background: rgba(255,255,255,0.8);
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
     border-radius: 5px;
@@ -102,10 +262,10 @@
     color: black;
 }
   .app-header {
-      background-color: #282c34;
+      /* background-color: #282c34; */
       min-height: 10vh;
       font-size: calc(10px + 2vmin);
-      color: white;
+      /* color: white; */
   }
   .slider {
     width: 100%;
@@ -116,12 +276,12 @@
   width:100%;
   padding-top: 20vh;
   }
-  main{
+  /* main{
     width:60%;
   }
   aside{
     width:35%;
-  }
+  } */
 
   
 
@@ -168,9 +328,9 @@
     width: 100%;
     height: 800px;
   }
-  .colton-description {
+  /* .colton-description {
     padding-left: 20vw;
-  }
+  } */
 
   .slider-wrapper {
     margin: 1rem;
@@ -220,7 +380,7 @@
     bottom: 0;
     margin: auto;
     height: 4rem;
-    background-color: white;
+    background-color: var(--text);
     border: none;
     width: 2rem;
     font-size: 3rem;
