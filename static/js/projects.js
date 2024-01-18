@@ -2,9 +2,9 @@ selected_project = ""
 const divs = document.querySelectorAll('.project-link');
 
 divs.forEach(el => el.addEventListener('click', event => {
-    console.log(event)
-    console.log(event.target.attributes[1].value)
-    console.log( event.target.attributes[1].value.nodeValue)
+    // console.log(event)
+    // console.log(event.target.attributes[1].value)
+    // console.log( event.target.attributes[1].value.nodeValue)
         if(selected_project != event.target.attributes[1].value){
             //Code for specific project
             if(selected_project != ""){

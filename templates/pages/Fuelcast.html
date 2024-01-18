@@ -14,7 +14,7 @@
     <br>
     <h3>What were my contributions?</h3>
     <h4>While I provided a general purpose level of development to the project as a whole, there were several milestones I am proud of:</h4>
-    <section class="slider-wrapper">
+    <section class="slider-wrapper" style="width: 800px; margin: auto;">
         <button class="slide-arrow" id="slide-arrow-prev-fc">
             &#8249;
         </button>
@@ -23,18 +23,18 @@
             &#8250;
         </button>
         
-        <ul class="slides-container" id="slides-container-fc">
+        <ul class="slides-container" id="slides-container-fc" >
             <li class="slide-fc">
                 <h4>Using Google Earth Engine, I was able to restructure the pixel raster data of each data layer into a hexgrid layout that dynamically adjusted in size and mean depending on the zoom level of the map</h4>
-                <img src="../../static/img/hex_map_fuelcast.PNG">
+                <div class="slide-img-holder"><img src="../../static/img/hex_map_fuelcast.PNG"></div>
             </li>
             <li class="slide-fc">
                 <h4>I was able to use the geometry of the zonal geojsons that the data was associated with to create a dynamic highlighting system on the map that referenced each superzone's zonal statistics with the graphs on the right.</h4>
-                <img src="../../static/img/zonal_highlight.PNG">
+                <div class="slide-img-holder"><img src="../../static/img/zonal_highlight.PNG"></div>
             </li>
             <li class="slide-fc">
                 <h4>I successfully linked the load-balancer that handled the caching of large downloads from our GCP Cloud Storage back end to the user-facing UI, a much needed feature as raster data can get quite large.</h4>
-                <img src="../../static/img/fuelcast_downloads.PNG">
+                <div class="slide-img-holder"><img src="../../static/img/fuelcast_downloads.PNG"></div>
             </li>
         </ul>
       </section>
